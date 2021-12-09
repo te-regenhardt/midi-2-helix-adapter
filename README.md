@@ -31,7 +31,7 @@ Taking a look at the *3 Note Generator* (3NG) block in the Helix, the behaviour 
 
 ### The (usual) MIDI keyboard situation:
 
-### How the adapter fixes this (in a way)
+### How the adapter fixes this (in a way):
 
 ## How to use the adapter
 
