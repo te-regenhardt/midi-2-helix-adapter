@@ -38,10 +38,27 @@ The adapter maps the NOTE_ON and NOTE_OFF messages of the keyboard to the corres
 
 The Mono functinality translates a single key into a note for OSC1. Note+interval1 and note+interval2 are used for OSC2 and OSC3. The Poly functionality of the adapter allows for three-voiced polyphony (using one of the three oscillators per key).
 
+## Setting up the CC values in the Helix device
+You have to set the 3NG's parameters to be controlled via CC messages. You can do this in HX edit:
+
+![Setting up CC1](assets/screencap_MIDI.png?raw=true "Title")
+
+You can also set this on the HX device. On the LT, I can do this by pressing and holding down a parameter knob (the row of six below the screen). You can then select the CC parameter.
+
+The bypass of the block also has to be set. In standard settings of the adapter, this is set to 77:
+
+![Setting up CC2](assets/screencap_bypass.png?raw=true "Title")
+
 ## How to use the adapter
 Plug in the MIDI keyboard and the HX device into the computer. If you want to use the GUI (graphic user interface), just run the adapter script "helix_midi_adapter.py". 
 
 You can run the adapter function without the GUI as described in the adapter script. Please note that you have to specify "gui_inport" and "gui_inport". If you do not tell the function what MIDI inport to use, it will try to send and receive on all ports. That might work, but there's no guarantee.
+
+General advice: Use the adapter with the GUI first to get a feeling for all things that need to be set. The GUI will look like this:
+
+![GUI](assets/screencap_adapter.jpg?raw=true "Title")
+
+The safest route would be to keep everything on the lower right side of the adapter as it is, and use these CC parameters on the HX device.
 
 ### Dependencies
 You will need to have Tkinter, mido, threading and PIL (especially ImageTk and Image) for this script. You can install these via pip (or any other way you prefer). 
